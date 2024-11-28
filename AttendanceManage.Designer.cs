@@ -42,7 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.Update = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
             this.attendanceID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Delete = new System.Windows.Forms.Button();
@@ -51,6 +51,7 @@
             // 
             // button1
             // 
+            this.button1.AllowDrop = true;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(560, 25);
             this.button1.Name = "button1";
@@ -62,6 +63,7 @@
             // 
             // cmbStatus
             // 
+            this.cmbStatus.AllowDrop = true;
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
             "Absent",
@@ -89,7 +91,9 @@
             // 
             // exit
             // 
+            this.exit.AllowDrop = true;
             this.exit.BackColor = System.Drawing.Color.Red;
+            this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.Location = new System.Drawing.Point(771, 438);
             this.exit.Name = "exit";
@@ -101,7 +105,9 @@
             // 
             // button2
             // 
+            this.button2.AllowDrop = true;
             this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(649, 438);
             this.button2.Name = "button2";
@@ -187,16 +193,18 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Student Name";
             // 
-            // Update
+            // update
             // 
-            this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update.Location = new System.Drawing.Point(52, 442);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(93, 36);
-            this.Update.TabIndex = 22;
-            this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
+            this.update.AllowDrop = true;
+            this.update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.update.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update.Location = new System.Drawing.Point(52, 442);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(93, 36);
+            this.update.TabIndex = 22;
+            this.update.Text = "Update";
+            this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.Update_Click);
             // 
             // attendanceID
             // 
@@ -217,6 +225,8 @@
             // 
             // Delete
             // 
+            this.Delete.AllowDrop = true;
+            this.Delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delete.Location = new System.Drawing.Point(206, 442);
             this.Delete.Name = "Delete";
@@ -230,11 +240,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 503);
+            this.ClientSize = new System.Drawing.Size(885, 511);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.attendanceID);
-            this.Controls.Add(this.Update);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.dtpTime);
             this.Controls.Add(this.txtRollNumber);
             this.Controls.Add(this.txtStudentName);
@@ -250,7 +260,6 @@
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.button1);
             this.Name = "AttendanceManage";
-            this.Text = "AttendanceManage";
             this.Load += new System.EventHandler(this.AttendanceManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).EndInit();
             this.ResumeLayout(false);
@@ -274,7 +283,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Button update;
         private System.Windows.Forms.TextBox attendanceID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Delete;

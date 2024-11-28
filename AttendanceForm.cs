@@ -3,14 +3,20 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Windows.Forms;
 using System.Data;
+using System.IO;
+using System.Linq;
 
 namespace AttendanceSystem
 {
-    public partial class AttendanceForm : Form
+    public partial class AttendanceForm : MetroFramework.Forms.MetroForm
     {
+        private string comboBox1FilePath = "Student.txt";
+        private string comboBox2FilePath = "RollNo.txt";
+
         public AttendanceForm()
         {
             InitializeComponent();
+            LoadComboBoxData();
         }
 
         private void AttendanceForm_Load(object sender, EventArgs e)
@@ -19,6 +25,7 @@ namespace AttendanceSystem
             dtpTime.Format = DateTimePickerFormat.Custom;
             dtpTime.CustomFormat = "yyyy-MM-dd HH:mm:ss"; // Displays date and time
             dtpTime.ShowUpDown = true; // Allows scrolling to change time
+            
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -37,8 +44,8 @@ namespace AttendanceSystem
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         // Add parameters
-                        cmd.Parameters.AddWithValue("@name", txtStudentName.Text);
-                        cmd.Parameters.AddWithValue("@roll", txtRollNumber.Text);
+                        cmd.Parameters.AddWithValue("@name", txtStudentName.SelectedItem?.ToString() ?? "");
+                        cmd.Parameters.AddWithValue("@roll", txtRollNumber.SelectedItem?.ToString() ?? "");
                         cmd.Parameters.AddWithValue("@date", dtpDate.Value.Date); // Date only
                         cmd.Parameters.AddWithValue("@time", dtpTime.Value.ToString("HH:mm:ss")); // Time only
                         cmd.Parameters.AddWithValue("@status", cmbStatus.SelectedItem?.ToString() ?? ""); // Check if selected
@@ -141,5 +148,100 @@ namespace AttendanceSystem
             this.Hide();
             v.Show();
         }
+
+        private void add_Click(object sender, EventArgs e)
+        {
+            string studentName = name.Text.Trim();
+            string rollNumber = rollno.Text.Trim();
+
+            if (!string.IsNullOrEmpty(studentName) && !string.IsNullOrEmpty(rollNumber))
+            {
+                if (!txtStudentName.Items.Contains(studentName) && !txtRollNumber.Items.Contains(rollNumber))
+                {
+                    // Add data to ComboBoxes
+                    txtStudentName.Items.Add(studentName);
+                    txtRollNumber.Items.Add(rollNumber);
+
+                    // Save data to files
+                    SaveComboBoxData();
+
+                    // Clear TextBoxes
+                    name.Clear();
+                    rollno.Clear();
+
+                    MessageBox.Show("Data saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("This data already exists in the ComboBoxes.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill both fields before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+    
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            string studentName = name.Text.Trim();
+            string rollNumber = rollno.Text.Trim();
+
+            int nameIndex = txtStudentName.Items.IndexOf(studentName);
+            int rollNumberIndex = txtRollNumber.Items.IndexOf(rollNumber);
+
+            if (nameIndex >= 0 && rollNumberIndex >= 0 && nameIndex == rollNumberIndex)
+            {
+                DialogResult result = MessageBox.Show(
+                    $"Are you sure you want to delete:\n\nName: {studentName}\nRoll Number: {rollNumber}?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    txtStudentName.Items.RemoveAt(nameIndex);
+                    txtRollNumber.Items.RemoveAt(rollNumberIndex);
+
+                    SaveComboBoxData(); // Save changes to file
+                    name.Clear();
+                    rollno.Clear();
+
+                    MessageBox.Show("Data deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No matching data found in ComboBoxes.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+        private void SaveComboBoxData()
+        {
+            File.WriteAllLines(comboBox1FilePath, txtStudentName.Items.Cast<string>());
+            File.WriteAllLines(comboBox2FilePath, txtRollNumber.Items.Cast<string>());
+        }
+
+        private void LoadComboBoxData()
+        {
+            if (File.Exists(comboBox1FilePath))
+            {
+                txtStudentName.Items.AddRange(File.ReadAllLines(comboBox1FilePath));
+            }
+
+            if (File.Exists(comboBox2FilePath))
+            {
+                txtRollNumber.Items.AddRange(File.ReadAllLines(comboBox2FilePath));
+            }
+        }
     }
 }
+    
+

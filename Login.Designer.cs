@@ -42,11 +42,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(242, 51);
+            this.label1.Location = new System.Drawing.Point(337, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(312, 39);
+            this.label1.Size = new System.Drawing.Size(106, 39);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Please Login First";
+            this.label1.Text = "Login";
             // 
             // label2
             // 
@@ -73,7 +73,7 @@
             this.txtinput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtinput.Location = new System.Drawing.Point(344, 183);
             this.txtinput.Name = "txtinput";
-            this.txtinput.Size = new System.Drawing.Size(122, 26);
+            this.txtinput.Size = new System.Drawing.Size(218, 26);
             this.txtinput.TabIndex = 3;
             // 
             // textpassword
@@ -87,12 +87,14 @@
             // 
             // submit
             // 
+            this.submit.AllowDrop = true;
             this.submit.BackColor = System.Drawing.Color.Lime;
+            this.submit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submit.ForeColor = System.Drawing.Color.Blue;
-            this.submit.Location = new System.Drawing.Point(454, 369);
+            this.submit.Location = new System.Drawing.Point(454, 359);
             this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(108, 33);
+            this.submit.Size = new System.Drawing.Size(118, 43);
             this.submit.TabIndex = 5;
             this.submit.Text = "Login";
             this.submit.UseVisualStyleBackColor = false;
@@ -100,12 +102,14 @@
             // 
             // exit
             // 
+            this.exit.AllowDrop = true;
             this.exit.BackColor = System.Drawing.Color.Red;
+            this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.Color.Blue;
-            this.exit.Location = new System.Drawing.Point(640, 392);
+            this.exit.Location = new System.Drawing.Point(249, 359);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(114, 33);
+            this.exit.Size = new System.Drawing.Size(122, 43);
             this.exit.TabIndex = 6;
             this.exit.Text = "Exit";
             this.exit.UseVisualStyleBackColor = false;
@@ -116,7 +120,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(356, 301);
+            this.checkBox1.Location = new System.Drawing.Point(430, 286);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(132, 20);
             this.checkBox1.TabIndex = 7;
@@ -128,7 +132,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.exit);
@@ -140,7 +143,6 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Login";
-            this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();
 

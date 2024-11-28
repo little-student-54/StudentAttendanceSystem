@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AttendanceSystem
 {
-    public partial class AttendanceManage : Form
+    public partial class AttendanceManage : MetroFramework.Forms.MetroForm
     {
         public AttendanceManage()
         {

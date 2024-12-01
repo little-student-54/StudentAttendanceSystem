@@ -46,7 +46,9 @@
             this.attendanceID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Delete = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -82,6 +84,7 @@
             // 
             // dgvAttendance
             // 
+            this.dgvAttendance.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAttendance.Location = new System.Drawing.Point(52, 74);
             this.dgvAttendance.Name = "dgvAttendance";
@@ -236,6 +239,16 @@
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AttendanceSystem.Properties.Resources.background;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(875, 500);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
             // AttendanceManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,9 +272,11 @@
             this.Controls.Add(this.dptDate);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "AttendanceManage";
             this.Load += new System.EventHandler(this.AttendanceManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,5 +302,6 @@
         private System.Windows.Forms.TextBox attendanceID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

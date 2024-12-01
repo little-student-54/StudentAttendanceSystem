@@ -16,6 +16,12 @@ namespace AttendanceSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            using (var splash = new SplashScreen())
+            {
+                splash.ShowDialog(); // Show the splash screen as a modal dialog
+            }
+
+            // Show Login Form
             Application.Run(new Login());
         }
     }

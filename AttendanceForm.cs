@@ -17,6 +17,7 @@ namespace AttendanceSystem
         {
             InitializeComponent();
             LoadComboBoxData();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void AttendanceForm_Load(object sender, EventArgs e)

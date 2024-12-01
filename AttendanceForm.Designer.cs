@@ -50,7 +50,9 @@
             this.txtStudentName = new MetroFramework.Controls.MetroComboBox();
             this.txtRollNumber = new MetroFramework.Controls.MetroComboBox();
             this.Remove = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -156,6 +158,8 @@
             // 
             // dgvAttendance
             // 
+            this.dgvAttendance.BackgroundColor = System.Drawing.Color.Black;
+            this.dgvAttendance.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAttendance.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvAttendance.Location = new System.Drawing.Point(426, 116);
@@ -295,6 +299,16 @@
             this.Remove.Theme = MetroFramework.MetroThemeStyle.Light;
             this.Remove.Click += new System.EventHandler(this.metroButton1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AttendanceSystem.Properties.Resources.background;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1045, 558);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // AttendanceForm
             // 
             this.AllowDrop = true;
@@ -323,8 +337,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "AttendanceForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,5 +370,6 @@
         private MetroFramework.Controls.MetroComboBox txtStudentName;
         private MetroFramework.Controls.MetroComboBox txtRollNumber;
         private MetroFramework.Controls.MetroButton Remove;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

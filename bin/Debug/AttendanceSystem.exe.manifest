@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AttendanceSystem.exe" size="31712">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AttendanceSystem.exe" size="675296">
       <assemblyIdentity name="AttendanceSystem" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>36iwNrrsWkIm46do9DPbDGPoU8fRuG7ACA0BOQG0xWk=</dsig:DigestValue>
+        <dsig:DigestValue>67+eOguvuVp5kezk2T5Ks/6fDxzU94uD6tUFTiWuuSo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

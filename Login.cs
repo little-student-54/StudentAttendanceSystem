@@ -17,7 +17,8 @@ namespace AttendanceSystem
         public Login()
         {
             InitializeComponent();
-           
+            this.StartPosition = FormStartPosition.CenterScreen;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,6 +71,16 @@ namespace AttendanceSystem
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             textpassword.PasswordChar = checkBox1.Checked ? '\0' : '*';
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

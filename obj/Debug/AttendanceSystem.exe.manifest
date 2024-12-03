@@ -65,13 +65,31 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AttendanceSystem.exe.config" size="414">
+  <file name="AttendanceSystem.exe.config" size="485">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>QHHtSaELdMiC9OCnw0t78/D/WZo/5sJmUDZBYs3VdPY=</dsig:DigestValue>
+      <dsig:DigestValue>5OHLRPY6zqvfsm17WdMUKJxkeRuzd9h6ttufJcrL8BM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Database\AttendanceDB.mdf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lptbPw1nrWoG+kg91F8hYcNskVEviffgTfKq5lMn7YI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Database\AttendanceDB_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>u0luKPgTmzC2QTyRtDIBWe0Qab8MeZbUsA3puqdsBxQ=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

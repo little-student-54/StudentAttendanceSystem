@@ -18,3 +18,5 @@ C:\Users\My PC\Desktop\BCAproject\AttendanceSystem\AttendanceSystem\obj\Debug\At
 C:\Users\My PC\Desktop\BCAproject\AttendanceSystem\AttendanceSystem\obj\Debug\AttendanceSystem.exe
 C:\Users\My PC\Desktop\BCAproject\AttendanceSystem\AttendanceSystem\obj\Debug\AttendanceSystem.pdb
 C:\Users\My PC\Desktop\BCAproject\AttendanceSystem\AttendanceSystem\obj\Debug\AttendanceSystem.AddNewUser.resources
+C:\Users\My PC\Desktop\BCAproject\AttendanceSystem\AttendanceSystem\bin\Debug\Database\AttendanceDB.mdf
+C:\Users\My PC\Desktop\BCAproject\AttendanceSystem\AttendanceSystem\bin\Debug\Database\AttendanceDB_log.ldf

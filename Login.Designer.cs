@@ -37,6 +37,7 @@
             this.exit = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(365, 74);
+            this.label1.Location = new System.Drawing.Point(334, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 39);
             this.label1.TabIndex = 0;
@@ -58,7 +59,7 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(206, 184);
+            this.label2.Location = new System.Drawing.Point(106, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 25);
             this.label2.TabIndex = 1;
@@ -82,9 +83,9 @@
             this.txtinput.BackColor = System.Drawing.Color.Black;
             this.txtinput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtinput.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtinput.Location = new System.Drawing.Point(344, 183);
+            this.txtinput.Location = new System.Drawing.Point(249, 183);
             this.txtinput.Name = "txtinput";
-            this.txtinput.Size = new System.Drawing.Size(218, 26);
+            this.txtinput.Size = new System.Drawing.Size(313, 26);
             this.txtinput.TabIndex = 3;
             // 
             // textpassword
@@ -105,7 +106,7 @@
             this.submit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submit.ForeColor = System.Drawing.Color.Blue;
-            this.submit.Location = new System.Drawing.Point(454, 359);
+            this.submit.Location = new System.Drawing.Point(571, 352);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(118, 43);
             this.submit.TabIndex = 5;
@@ -120,7 +121,7 @@
             this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.Color.Blue;
-            this.exit.Location = new System.Drawing.Point(249, 359);
+            this.exit.Location = new System.Drawing.Point(341, 384);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(122, 43);
             this.exit.TabIndex = 6;
@@ -153,12 +154,28 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // button1
+            // 
+            this.button1.AllowDrop = true;
+            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Blue;
+            this.button1.Location = new System.Drawing.Point(111, 352);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 43);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "New User";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(831, 474);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.submit);
@@ -188,5 +205,6 @@
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

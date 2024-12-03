@@ -17,3 +17,4 @@ C:\Users\My PC\Desktop\BCAproject\AttendanceSystem\AttendanceSystem\obj\Debug\At
 C:\Users\My PC\Desktop\BCAproject\AttendanceSystem\AttendanceSystem\obj\Debug\Attendan.64016B0E.Up2Date
 C:\Users\My PC\Desktop\BCAproject\AttendanceSystem\AttendanceSystem\obj\Debug\AttendanceSystem.exe
 C:\Users\My PC\Desktop\BCAproject\AttendanceSystem\AttendanceSystem\obj\Debug\AttendanceSystem.pdb
+C:\Users\My PC\Desktop\BCAproject\AttendanceSystem\AttendanceSystem\obj\Debug\AttendanceSystem.AddNewUser.resources

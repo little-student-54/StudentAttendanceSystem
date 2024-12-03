@@ -82,5 +82,12 @@ namespace AttendanceSystem
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AddNewUser addNewUser = new AddNewUser();
+            this.Hide();
+            addNewUser.Show();
+        }
     }
 }

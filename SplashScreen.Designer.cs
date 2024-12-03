@@ -48,6 +48,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.pictureBox1.Image = global::AttendanceSystem.Properties.Resources.SplashBackground__1_;
             this.pictureBox1.Location = new System.Drawing.Point(2, 11);
             this.pictureBox1.Name = "pictureBox1";
